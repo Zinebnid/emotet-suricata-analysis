@@ -1,1 +1,35 @@
+# ============================================
+# Emotet Infection — IOC Report
+# Date: 2021-01-06
+# Analyst: Zineb Nid
+# PCAP: Example-1-2021-01-06-Emotet-infection.pcap
+# ============================================
 
+## MALICIOUS IP ADDRESSES (Confirmed C2)
+5.2.136.90        # Emotet C2 | VirusTotal 6/94 | ISP: Digi Romania | Port 80
+167.71.4.0        # Emotet C2 | VirusTotal 10/94 | ISP: DigitalOcean NL | Port 8080
+
+## SUSPICIOUS IP ADDRESSES (Suspected C2)
+103.92.235.25     # Suspected C2 | observed in HTTP traffic
+89.252.164.58     # Suspected C2 | observed in HTTP traffic
+173.255.195.246   # Suspected C2 | observed in HTTP traffic
+66.153.205.191    # Suspected C2 | observed in HTTP traffic
+
+## VICTIM HOST
+10.1.6.206        # Infected internal host | source of all C2 beacons
+
+## MALICIOUS URLs (C2 Endpoints)
+/7u0e9j2avwlvnuynyo/szcm27k/fzb067wy/
+/ko5ezxmguvv/p8d4003oiu/utkdae7r/74uzr8n74r/
+/ch7yy6wqvi5hxkoka/pu5xvenbb9n9r3y/j6o8wv0ruxh/
+/h6qi/lb1dhp/98wzr2krwmm4/
+/hbwubd1ghq2/6mgzkg6dn5to/6lx9qp053kb5jhgn/
+/jw5cumz32djf/
+/3rkiie36/
+
+## COMPROMISED LEGITIMATE SITES USED FOR C2 ROUTING
+/cgi-bin/Ui4n/
+/cgi-sys/suspendedpage.cgi
+/blog/0I/
+/wp-includes/JD8/
+/rx-5700-6hnr7/Sgms/

@@ -31,6 +31,11 @@ Emotet is a banking trojan and malware strain first appeard in 2014, spreads via
 4. Observed POST requests to random URLs , identified as C2 beaconing
 5. write a custom suricata rule targeting the C2 URL pattern
 6. Rule fired 19 alerts and confirm allerts appers in fast-log
+![Suricata detecting 19 Emotet C2 beacons using custom rule](screenshots/01_suricata_alerts.png)
+
+7. Reconstructed TCP streams in Wireshark
+![Wireshark TCP stream showing Emotet POST request to C2 server 5.2.136.90](screenshots/02_custom_rule.png)
+
 8. Extract all IPs origin and destination using tshark
 9. validate suspicious ips using totalvirus and abuse ipdb
 

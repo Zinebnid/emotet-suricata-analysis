@@ -50,6 +50,33 @@ The goal from this rule is to detect suspicious and reppeated HTTP POST requests
 
 ## 7. IOCs 
 
+| Type | Value | Source | Notes |
+|------|------|------|-----|
+| malicious IP | 5.2.136.90 | VirusTotal 6/94, AbuseIPDB | External C2 Communication |
+| malicoius IP | 167.71.4.0 | VirusTotal 10/94 | External C2 communication over port 8080 |
+| malicoius IP | 103.92.235.25 | Suspected C2 | PCAP Analysis |
+| URL/Path | /7u0e9j2avwlvnuynyo/szcm27k/fzb067wy/ | C2 endpoint | Suspicious HTTP POST path observed in stream |
+
+## 8. MITTRE ATT&CK Maping: 5 Techniques
+
+| Technique ID | Name | Evidence | 
+|------|------|------|
+| T1071.001 | Application Layer Protocol : Web Protocols | Emotet used HTTP post requests for c2 communication|
+| T
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

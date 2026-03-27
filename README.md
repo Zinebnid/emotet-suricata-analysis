@@ -70,17 +70,22 @@ alert http any any -> any any (
 ```
 
 **Why this rule works:**
-Emotet generates random multi-segment URLs like `/abc123/def456/` for every 
-C2 session to avoid static blocklists. Rather than matching a specific URL, 
-this rule uses a regex pattern to detect the *structure* of those URLs — 
-which is consistent across all Emotet C2 communication. The rule fired 
-**19 alerts** against two confirmed C2 servers during analysis.
+Emotet generates randomized multi-segment URL paths (e.g., `/abc123/def456/`) 
+for each C2 session to evade static signature-based detection. Instead of 
+matching a fixed URL, this rule targets the structural pattern of those paths 
+using a regex-based approach — the difference between reactive detection 
+(blocking known bad URLs) and behavioral detection (identifying the technique 
+itself). This allows detection of Emotet traffic regardless of the specific 
+URL used. During analysis, the rule successfully triggered 19 alerts across 
+two confirmed C2 servers, validating its effectiveness.
 
 The full rule file is available in the `/rules` folder.
 
 ---
 
 ## 6. IOCs (Indicators of Compromise)
+
+The following IOCs were extracted from the PCAP and validated using external threat intelligence sources.
 
 ![tshark IOC extraction — all destination IPs from the PCAP](screenshots/03_tcp_stream.png)
 

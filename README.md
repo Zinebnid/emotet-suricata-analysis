@@ -49,7 +49,7 @@ operation, making this capture a historically significant sample.
 
 8. Reconstructed TCP streams in Wireshark to inspect malware payload content
 
-![Wireshark TCP stream showing Emotet HTTP POST to C2 server 5.2.136.90](screenshots/02_custom_rule.png)
+![Wireshark TCP stream showing Emotet HTTP POST to C2 server 5.2.136.90](screenshots/02_wireshark_tcp_stream.png)
 
 9. Extracted all destination IPs from the PCAP using tshark
 10. Validated suspicious IPs on VirusTotal and AbuseIPDB
@@ -87,7 +87,7 @@ The full rule file is available in the `/rules` folder.
 
 The following IOCs were extracted from the PCAP and validated using external threat intelligence sources.
 
-![tshark IOC extraction — all destination IPs from the PCAP](screenshots/03_tcp_stream.png)
+![tshark IOC extraction — all destination IPs from the PCAP](screenshots/03_tshark_ioc_extraction.png)
 
 | Type | Value | Verdict | Source |
 |------|-------|---------|--------|

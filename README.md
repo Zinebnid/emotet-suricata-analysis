@@ -153,7 +153,18 @@ User-Agent string to disguise its traffic as legitimate browser activity.
 
 ---
 
-## 9. Key Skills Demonstrated
+## 9. Detection Gap Analysis
+
+The default Suricata ruleset (435 rules) produced only 1 alert against 
+this traffic. The custom rule targeting Emotet's URL structure produced 
+19 alerts — demonstrating that generic rulesets miss behavioral patterns 
+that analyst-written rules can catch. This highlights the importance of 
+custom detection engineering over relying solely on vendor-provided signatures.
+
+---
+
+
+## 10. Key Skills Demonstrated
 
 - Network intrusion detection with Suricata IDS
 - PCAP forensic analysis using Wireshark and tshark
